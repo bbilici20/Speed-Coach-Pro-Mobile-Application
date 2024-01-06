@@ -1,5 +1,6 @@
 {
   "expo": {
+    "entryPoint": "./Welcome.js",
     "name": "AwesomeProject",
     "slug": "AwesomeProject",
     "version": "1.0.0",
