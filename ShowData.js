@@ -131,7 +131,7 @@ export const ShowData = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-    <View style={{flex:1}}>
+    
       <Text style={styles.text}>{location && `Latitude: ${location.coords.latitude.toFixed(2)}`}</Text>
       <Text style={styles.text}>{location && `Longitude: ${location.coords.longitude.toFixed(2)}`}</Text>
       <Text style={styles.text}>{location && `Speed: ${location.coords.speed}`}</Text>
@@ -141,13 +141,8 @@ export const ShowData = ({navigation}) => {
       <Text style={styles.text}>Strokes Per Minute: {spm}</Text>
       <Text style={styles.text}>Distance Traveled: {totalDistance}</Text>
       <Text style={styles.text}>Time for 500m: {split}</Text>
-    </View>
     
-
-      
-    {image && <Image source={{ uri: image }} style={styles.image} />}
-    <Image source={{uri: 'http://192.168.4.1/capture.jpg'}}
-       style={{width: 400, height: 400}} />
+    
   </View>
   );
 }
@@ -156,22 +151,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal:20,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgb(0, 132, 236)',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
+    fontSize:20,
     alignContent: 'center',
     paddingVertical: 5,
     paddingHorizontal:15,
     justifyContent: 'center', 
     alignItems: 'center',
-    width: 250, // Adjust the width as needed
-    height: 40,
+    width: 300, // Adjust the width as needed
+    height: 80,
     margin: 2, // Add margin between items
     borderColor: 'black', // Black border color
     borderWidth: 5, // 5-pixel border width
-    backgroundColor: 'yellow', // Yellow background color
+    backgroundColor: 'skyblue', // Yellow background color
   },
   buttonContainer: {
     justifyContent: 'center',

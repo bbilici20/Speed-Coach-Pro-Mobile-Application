@@ -19,9 +19,17 @@ const AppStackNavigator = () => {
                 fullScreenGestureEnabled: true,
                 headerShadowVisible: false,
                 headerTitleAlign: 'center',
-            }} initialRouteName="splash">
-            <AppStack.Screen name="welcome" component={Welcome}/>
-            <AppStack.Screen name="show-data" component={ShowData}/>
+            }} >
+            <AppStack.Screen name="welcome" component={Welcome} options={{
+          headerShown: false, 
+        }}/>
+            <AppStack.Screen name="show-data" component={ShowData} options={{
+          title: 'Practice Data',
+          headerStyle: {
+            backgroundColor: 'rgb(0, 132, 236)', 
+          },
+          headerTintColor: 'white', 
+        }}/>
             <AppStack.Screen name="splash" component={SplashScreen}/>
         
         </AppStack.Navigator>
